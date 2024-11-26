@@ -1,0 +1,55 @@
+#!/bin/bash
+
+echo "Hello world"
+directory=$(pwd)
+echo "My present working directory is : $directory"
+
+
+
+name="Joe"
+age=40
+now=$(date)
+echo "Hello my name is $name"
+echo "I am $age years old"
+echo "This script was executed on: $now"
+
+if [ $age -eq 40 ]
+then 
+     echo "You are old enough"
+fi
+
+
+if [ -f "name.txt" ]
+then
+    rm name.txt
+    echo "the file was removed"
+else
+    touch name.txt
+    echo "The file was created"
+fi
+
+v=$(which htop)
+
+echo $v
+
+
+
+command=sl
+if command -v $command
+then
+    echo "The command exist and it is running..."
+else
+    echo "The command doesn't exist installing it..."
+    sudo packman -Sy &&  sudo pacman -S $command
+fi
+#$command
+
+number=1
+while [ $number -le 10 ]
+do
+  echo $number
+  #number=$(expr $number + 1)
+  number=$(($number+1))
+  #sleep 0.5
+done
+

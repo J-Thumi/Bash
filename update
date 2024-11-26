@@ -1,0 +1,17 @@
+#!/bin/bash
+
+releasefile=/etc/os-release
+
+if grep -q "Arch" $releasefile
+then
+    sudo pacman -Syu
+    echo "You are on arch"
+fi
+
+if grep -q "Debian" $releasefile || grep -q "Ubuntu $releasefile
+then
+    sudo apt update
+    sudo apt dist-update
+    echo "You are on Pop os"
+fi
+
