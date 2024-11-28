@@ -1,0 +1,10 @@
+2. Write a Shell script that reads the text in a text file called Angukanayo.txt
+and outputs number of characters (inclusive of white spaces ) in that
+textfile   2(b) write the script to report if in the text file called Angukanayo.txt
+has a string
+ Mpangale
+ and the line number on which it occurs within
+file.
+
+Mpangale
+Mpangale

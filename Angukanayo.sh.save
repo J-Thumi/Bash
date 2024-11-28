@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#file to be read
+file="Angukanayo.txt"
+
+#check if file exists
+if [ -f "$file" ]
+then
+    echo "Reading contents of $file"
+    content=$(cat $file)  #display the contents ofscript that reads the text in a text file called Angukanayo.txt the file
+    echo $content
+    length=${#content}
+    echo "$file has a total of $length characters"
+
+else
+   echo "$file does not exist"
+fi
